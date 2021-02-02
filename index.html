@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>The handmaid's tale</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="header__title">The handsmaid's tale </h1>
+      <p class="header__subtitle">Episode guide</p>
+    </header>
+    <section>
+      <h2 class="hidden">Filter</h2>
+      <form class="filter" action="index.html">
+        <div class="form-wrapper">
+          <label class="form-label">Select your favourite season
+            <select name="seasons" class="filter__seasons">
+              <!--
+                <option value="0">all seasons</option>
+                <option value="1">Season 1</option>
+                <option value="2">Season 2</option>
+                <option value="3">Season 3</option> 
+              -->
+            </select>
+          </label>
+        </div>
+        <div class="form-wrapper">
+          <label class="form-label">Search on episode title
+            <input type="search" class="filter__title" name="title" placeholder="Offred" size="50" value="women">
+          </label>
+        </div>
+        <div class="form-wrapper">
+          <input class="filter-button" type="submit" value="filter">
+        </div>
+      </form>
+    </section>
+    <section>
+      <h2 class="hidden">Episodes</h2>
+      <ul class="episodes">
+        <li class="season__episode">
+          <article class="episode">
+            <img class="episode__image"
+              src="https://m.media-amazon.com/images/M/MV5BN2ZjZjU5MjctNWU1NC00YjE0LTk2NzMtYzM1YmUyYWEzZWJhXkEyXkFqcGdeQXVyMTE2NzA0Ng@@._V1_UY126_UX224_AL_.jpg"
+              alt="Offred">
+            <div class="episode__details">
+              <h3 class="episode__title">S1-E1 -- Offred</h3>
+              <p class="episode__rating silver">Rating: 8.2</p>
+              <p class="episode__description">Offred, one of the few fertile women known as Handmaids in the oppressive
+                Republic of Gilead, struggles to
+                survive as a reproductive surrogate for a powerful Commander and his resentful wife.</p>
+              <p class="episode__meta">Released on April 26, 2017 by Reed Morano</p>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
