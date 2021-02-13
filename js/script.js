@@ -5,7 +5,7 @@
       nr: 1,
       meta: { released: `April 26, 2017`, director: `Reed Morano` },
       title: `Offred`,
-      rating: 8.2,
+      rating: 9,
       image: `https://m.media-amazon.com/images/M/MV5BN2ZjZjU5MjctNWU1NC00YjE0LTk2NzMtYzM1YmUyYWEzZWJhXkEyXkFqcGdeQXVyMTE2NzA0Ng@@._V1_UY126_UX224_AL_.jpg`,
       description: `Offred, one of the few fertile women known as Handmaids in the oppressive Republic of Gilead, struggles to survive as a reproductive surrogate for a powerful Commander and his resentful wife.`,
     },
@@ -355,7 +355,21 @@
         img.classList.add("episode__image");
         div.classList.add("episode__details");
         h3.classList.add("episode__title");
-        p1.classList.add("episode__rating", "silver");
+        p1.classList.add("episode__rating");
+
+        //Rating color
+        if (episode.rating >= 7 && episode.rating < 8) {
+          p1.classList.add("bronze");
+        }
+
+        if (episode.rating >= 8 && episode.rating < 9) {
+          p1.classList.add("silver");
+        }
+
+        if (episode.rating >= 9) {
+          p1.classList.add("gold");
+        }
+
         p2.classList.add("episode__description");
         p3.classList.add("episode__meta");
 
