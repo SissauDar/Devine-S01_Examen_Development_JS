@@ -392,13 +392,23 @@
     const filter = (e) => {
       e.preventDefault();
       console.log(`filter called`);
+      const season = document.querySelector(`.filter__seasons`).value;
       const filterTitle = document.querySelector(`.filter__title`);
       console.log(filterTitle.value);
 
       const filteredItems = episodes.filter(function (episode) {
-        return episode.title
-          .toLowerCase()
-          .includes(filterTitle.value.toLowerCase());
+        if (season == 0) {
+          return episode.title
+            .toLowerCase()
+            .includes(filterTitle.value.toLowerCase());
+        } else {
+          return (
+            episode.title
+              .toLowerCase()
+              .includes(filterTitle.value.toLowerCase()) &&
+            episode.season == season
+          );
+        }
       });
 
       showResults(filteredItems);
